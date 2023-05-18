@@ -39,3 +39,22 @@ function clearGrid() {
       square.style.backgroundColor = 'white';
    });
 }
+
+function drawColor() {
+   allSquares.forEach(square => {
+      square.addEventListener('mouseover', (e) => {
+         e.target.style.backgroundColor = '#' + getRandomColor();
+      });
+   });
+}
+
+function getRandomColor() {
+   const chars = '012345689abcdef';
+   const colorCodeLength = 6;
+   let colorCode = '';
+   for (let index = 0; index < colorCodeLength; index++) {
+      const randomNum = Math.floor(Math.random() * chars.length);
+      colorCode += chars.substring(randomNum, randomNum + 1)
+   }
+   return colorCode;
+}
