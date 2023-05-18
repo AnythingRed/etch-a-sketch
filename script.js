@@ -33,3 +33,9 @@ function changeSize() {
    generateGrid(+inputNum);
    draw();
 }
+
+function clearGrid() {
+   allSquares.forEach(square => {
+      square.style.backgroundColor = 'white';
+   });
+}

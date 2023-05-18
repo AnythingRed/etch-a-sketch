@@ -25,7 +25,7 @@ body {
 }
 
 button {
-   margin: 20px;
+   margin-bottom: 20px;
    font-size: 24px;
    color: white;
    padding: 10px 15px;
@@ -33,4 +33,16 @@ button {
    border: 3px solid white;
    border-radius: 12px;
    text-shadow: 1px 2px 4px #000;
+   cursor: pointer;
+}
+
+button:hover {
+   background-color: rgb(48, 109, 223);
+}
+
+.buttons {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 800px;
 }
